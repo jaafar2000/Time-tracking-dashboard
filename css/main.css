@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226deg, 43%, 10%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+body main {
+  padding: 3rem;
+  margin: auto;
+}
+@media (min-width: 48rem) {
+  body main {
+    display: -ms-grid;
+    display: grid;
+    width: 80%;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+}
+body main .report {
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  background-color: hsl(235deg, 46%, 20%);
+}
+@media (min-width: 48rem) {
+  body main .report {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+  }
+}
+body main .report .upper__info {
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 2rem;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 48rem) {
+  body main .report .upper__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body main .report .upper__info .img {
+    margin-bottom: 0.5rem;
+  }
+  body main .report .upper__info .info > :nth-child(2) {
+    font-size: 2rem;
+  }
+}
+body main .report .upper__info .img {
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/image-jeremy.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 1rem;
+}
+body main .report .upper__info .info {
+  color: hsl(236deg, 100%, 87%);
+}
+body main .down__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 20px;
+  padding: 1rem 0;
+  color: hsl(236deg, 100%, 87%);
+}
+@media (min-width: 48rem) {
+  body main .down__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main .down__info p {
+    margin-bottom: 2rem;
+  }
+  body main .down__info p:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+body main section {
+  height: 159px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 206px;
+  background-size: 16%;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+@media (min-width: 48rem) {
+  body main section {
+    background-position-x: 149px;
+    background-size: 28%;
+    height: 200px;
+  }
+}
+body main section .info {
+  background-color: hsl(235deg, 46%, 20%);
+  padding: 2rem;
+  border-radius: 20px;
+}
+body main section .info:hover {
+  background-color: rgb(34, 42, 136);
+  cursor: pointer;
+}
+@media (min-width: 48rem) {
+  body main section .info {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+  }
+}
+body main section .info .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  margin-bottom: 1rem;
+}
+body main section .info .head .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+body main section .info .head .span:hover {
+  cursor: pointer;
+}
+body main section .info .head .span span {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+}
+body main section .info .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media (min-width: 48rem) {
+  body main section .info .time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+body main section .info .time > :first-child {
+  font-size: 1.5rem;
+  color: white;
+}
+body main section .info .time > :nth-child(2) {
+  color: hsl(236deg, 100%, 87%);
+}
+body main > :nth-child(2) {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url("../images/icon-work.svg");
+}
+body main > :nth-child(3) {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url("../images/icon-play.svg");
+}
+body main > :nth-child(4) {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url("../images/icon-study.svg");
+}
+body main > :nth-child(5) {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url("../images/icon-exercise.svg");
+}
+body main > :nth-child(6) {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url("../images/icon-social.svg");
+}
+body main > :nth-child(7) {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url("../images/icon-self-care.svg");
+}

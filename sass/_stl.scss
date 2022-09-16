@@ -1,0 +1,187 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Rubik", sans-serif;
+  background-color: $Verydarkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  & main {
+    padding: 3rem;
+    margin: auto;
+    @include breakpoint-up(medium) {
+      display: grid;
+      width: 80%;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    }
+    & .report {
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      @include breakpoint-up(medium) {
+        grid-row: span 2;
+      }
+
+      background-color: $Darkblue;
+      & .upper__info {
+        background-color: $Blue;
+        padding: 2rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint-up(medium) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          & .img {
+            margin-bottom: 0.5rem;
+          }
+          & .info > :nth-child(2) {
+            font-size: 2rem;
+          }
+        }
+        & .img {
+          width: 80px;
+          height: 80px;
+          background-image: url("../images/image-jeremy.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          border: 2px solid white;
+          margin-right: 1rem;
+        }
+        & .info {
+          color: $PaleBlue;
+
+        }
+      }
+    }
+    & .down__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 20px;
+      padding: 1rem 0;
+      color: $PaleBlue;
+      @include breakpoint-up(medium) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 1rem;
+        justify-content: space-between;
+        & p {
+          margin-bottom: 2rem;
+          &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    & section {
+      height: 159px;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      background-position-x: 206px;
+      background-size: 16%;
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      @include breakpoint-up(medium) {
+        background-position-x: 149px;
+        background-size: 28%;
+        height: 200px;
+
+      }
+
+      & .info {
+        background-color: $Darkblue;
+        padding: 2rem;
+        border-radius: 20px;
+        &:hover {
+          background-color: rgb(34, 42, 136);
+          cursor: pointer;
+        }
+        @include breakpoint-up(medium) {
+          position: absolute;
+          bottom: -1px;
+          width: 100%;
+         
+        }
+        & .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: white;
+          margin-bottom: 1rem;
+          & .span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            &:hover{
+              cursor: pointer;
+            }
+            & span {
+              width: 5px;
+              height: 5px;
+              background-color: white;
+              border-radius: 50%;
+              margin-right: 0.2rem;
+            }
+          }
+        }
+        & .time {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          @include breakpoint-up(medium) {
+            flex-direction: column;
+          }
+          & > :first-child {
+            font-size: 1.5rem;
+            color: white;
+          }
+          & > :nth-child(2) {
+            color: $PaleBlue;
+          }
+        }
+      }
+    }
+    & > :nth-child(2) {
+      background-color: $Lightredwork;
+      background-image: url("../images/icon-work.svg");
+    }
+    & > :nth-child(3) {
+      background-color: $Softblue;
+      background-image: url("../images/icon-play.svg");
+    }
+    & > :nth-child(4) {
+      background-color: $Lightred;
+      background-image: url("../images/icon-study.svg");
+    }
+    & > :nth-child(5) {
+      background-color: $Limegreen;
+      background-image: url("../images/icon-exercise.svg");
+    }
+    & > :nth-child(6) {
+      background-color: $Violet;
+      background-image: url("../images/icon-social.svg");
+    }
+    & > :nth-child(7) {
+      background-color: $Softorange;
+      background-image: url("../images/icon-self-care.svg");
+    }
+  }
+}
